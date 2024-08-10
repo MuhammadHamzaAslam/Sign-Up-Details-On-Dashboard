@@ -2,18 +2,16 @@
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
-      <title>Login Signup</title>
+      <title>Course Registration</title>
       <link rel="stylesheet" href="Files/style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="shortcut icon" href="Images/wallpaper 5.jpeg" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    </head>
    <body>
       <div class="container">
-         <header>Signup Form</header>
-         <div class="line"></div>
-         <div>
-            <p>Already Have an <a href="#" id="loginAcc">account</a></p>
-         </div>
+         <header>Course Registration Form</header>
+         <div class="student-portal"><i class="fa-solid fa-graduation-cap"></i> Student Portal</div>
          <div class="progress-bar">
             <div class="step">
                <p>
@@ -127,15 +125,21 @@
                   </div>
                   <div class="field">
                      <div class="label">
-                        Username
+                        Courses
                      </div>
-                     <input type="text" id="userName">
+                     <select name="" id="userName">
+                        <option value="Web Development">Web Development</option>
+                        <option value="Graphic Designing">Graphic Designing</option>
+                        <option value="Python Programming">Python Programming</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                      </select>
                   </div>
                   <div class="field">
                      <div class="label">
                         Password
                      </div>
                      <input type="password" id="password">
+                      
                   </div>
                   <div class="field btns">
                      <button class="prev-3 prev">Previous</button>
@@ -145,26 +149,30 @@
             </form>
          </div>
       </div>
-      <div id="container">
-        <div class="wrapper">
-          <div class="title"><span>Login Form</span></div>
-          <form action="#">
-            <div class="row">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Email or Phone" required>
-            </div>
-            <div class="row">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" required>
-            </div>
-            <div class="pass"><a href="#">Forgot password?</a></div>
-            <div class="row button">
-              <input type="submit" value="Login">
-            </div>
-            <div class="signup-link">Not a member? <a href="#" id="SignupNow">Signup now</a></div>
-          </form>
-        </div>
-      </div>
+         <div class="wrapper">
+            <header>Login Form</header>
+            <form action="#">
+              <div class="field email">
+                <div class="input-area">
+                  <input type="text" placeholder="Email Address" id="loginEmail">
+                  <i class="icon fas fa-envelope"></i>
+                  <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Email can't be blank</div>
+              </div>
+              <div class="field password">
+                <div class="input-area">
+                  <input type="password" placeholder="Password" id="loginPassword">
+                  <i class="icon fas fa-lock"></i>
+                  <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Password can't be blank</div>
+              </div>
+              <div class="pass-txt"><a href="#">Forgot password?</a></div>
+              <input type="submit" value="Login" id="loginBtn">
+            </form>
+            <div class="sign-txt">Not yet member? <a href="#" id="loginSignup">Signup now</a></div>
+          </div>
       <script src="Files/app.js" type="module"></script>
       <script src="Dashboard/Files/dashboard.js" type="module"></script>
    </body>
